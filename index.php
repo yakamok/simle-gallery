@@ -46,28 +46,32 @@ if (isset($index_num)){
 </div>
 <div class="headerright">
 <?php
+
 if ($index > 20){
 $next = $index - 5;
 }else{
 $next = 5;
 }
+
 if ($index < $count){
 	$prev = $index + 5;
 }else if($index >= $count){
 	$prev = $count;
 }
+
 $menu = $index;
+
 if ($menu < $count){
-echo "<span class='pages'><a href='index.php?index=" . $prev . "'>Prev</a></span>";
-echo "<span class='pages'><a href='index.php?index=" . $count . "'>Home</a></span>";
+	echo "<span class='pages'><a href='index.php?index=" . $prev . "'>Prev</a></span>";
+	echo "<span class='pages'><a href='index.php?index=" . $count . "'>Home</a></span>";
 } else{
-echo "<span class='pagesnot'>Prev</span>";
-echo "<span class='pagesnot'>Home</span>";
+	echo "<span class='pagesnot'>Prev</span>";
+	echo "<span class='pagesnot'>Home</span>";
 }
 if ($menu > 5){
-echo "<span class='pages'><a href='index.php?index=" . $next . "'>Next</a></span>";
+	echo "<span class='pages'><a href='index.php?index=" . $next . "'>Next</a></span>";
 }else{
-echo "<span class='pagesnot'>Next</span>";
+	echo "<span class='pagesnot'>Next</span>";
 }
 ?>
 </div>
@@ -75,9 +79,9 @@ echo "<span class='pagesnot'>Next</span>";
 </div>
 <?php
 if (file_exists("nav.txt") == 1){
-echo '<div id="nav">';
-include 'nav.txt';
-echo '</div>';
+	echo '<div id="nav">';
+	include 'nav.txt';
+	echo '</div>';
 }
 ?>
 </div>
@@ -97,20 +101,22 @@ if ($index > 0){
 ?>
 <div class="pagnation">
 <span class="subtitle">All images copyright photos.yakamo.org, 2016.</span>
+
 <?php
 if ($menu < $count){
-echo "<span class='pages'><a href='index.php?index=" . $prev . "'>Prev</a></span>";
-echo "<span class='pages'><a href='index.php?index=" . $count . "'>Home</a></span>";
+	echo "<span class='pages'><a href='index.php?index=" . $prev . "'>Prev</a></span>";
+	echo "<span class='pages'><a href='index.php?index=" . $count . "'>Home</a></span>";
 } else{
-echo "<span class='pagesnot'>Prev</span>";
-echo "<span class='pagesnot'>Home</span>";	
+	echo "<span class='pagesnot'>Prev</span>";
+	echo "<span class='pagesnot'>Home</span>";	
 }
 if ($menu > 10){
-echo "<span class='pages'><a href='index.php?index=" . $next . "'>Next</a></span>";
+	echo "<span class='pages'><a href='index.php?index=" . $next . "'>Next</a></span>";
 }else{
-echo "<span class='pagesnot'>Next</span>";
+	echo "<span class='pagesnot'>Next</span>";
 }
 ?>
+
 </div>
 	</div>
 </div>
